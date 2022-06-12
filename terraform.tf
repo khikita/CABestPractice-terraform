@@ -10,7 +10,7 @@ terraform {
     required_version = ">=1"
 
     cloud {
-        organization = "add-smart"
+        organization = "Your Organization"
         workspaces {
             name = "CABestPractice-terraform"
         }
