@@ -1,5 +1,5 @@
 resource "azuread_conditional_access_policy" "G001" {
-    display_name = "G001"
+    display_name = "G001_Require MFA for Guests"
     state        = "disabled"
 
     conditions {
@@ -44,7 +44,7 @@ resource "azuread_conditional_access_policy" "G001" {
 }
 
 resource "azuread_conditional_access_policy" "L001" {
-    display_name = "L001"
+    display_name = "L001_Block legacy authentication"
     state        = "disabled"
 
     conditions {
@@ -88,7 +88,7 @@ resource "azuread_conditional_access_policy" "L001" {
 }
 
 resource "azuread_conditional_access_policy" "L002" {
-    display_name = "L002"
+    display_name = "L002_Block ActiveSync"
     state        = "disabled"
 
     conditions {
@@ -132,7 +132,7 @@ resource "azuread_conditional_access_policy" "L002" {
 }
 
 resource "azuread_conditional_access_policy" "M001" {
-    display_name = "M001"
+    display_name = "M001_Require Compliant iOS/Android Device"
     state        = "disabled"
 
     conditions {
@@ -188,7 +188,7 @@ resource "azuread_conditional_access_policy" "M001" {
 }
 
 resource "azuread_conditional_access_policy" "M002" {
-    display_name = "M002"
+    display_name = "M002_Require Approved Clients on iOS/Android for MS Apps"
     state        = "disabled"
 
     conditions {
@@ -243,7 +243,7 @@ resource "azuread_conditional_access_policy" "M002" {
 }
 
 resource "azuread_conditional_access_policy" "M003" {
-    display_name = "M003"
+    display_name = "M003_Require DJ Win10 from non-Trusted location"
     state        = "disabled"
 
     conditions {
@@ -306,7 +306,7 @@ resource "azuread_conditional_access_policy" "M003" {
 }
 
 resource "azuread_conditional_access_policy" "P001" {
-    display_name = "P001"
+    display_name = "P001_Require MFA for highest privileged admins "
     state        = "disabled"
 
     conditions {
@@ -348,7 +348,7 @@ resource "azuread_conditional_access_policy" "P001" {
 }
 
 resource "azuread_conditional_access_policy" "P003" {
-    display_name = "P003"
+    display_name = "P003_Lockdown admins"
     state        = "disabled"
 
     conditions {
@@ -399,7 +399,7 @@ resource "azuread_conditional_access_policy" "P003" {
 }
 
 resource "azuread_conditional_access_policy" "R001" {
-    display_name = "R001"
+    display_name = "R001_Safety net policy Require MFA or Managed device from off-net"
     state        = "disabled"
 
     conditions {
