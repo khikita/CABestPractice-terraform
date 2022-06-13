@@ -2,15 +2,17 @@
 variable "AAD_TENANT_ID" {
     type = string
 }
-
-variable "client_secret" {}
+variable "organization" {}
+variable "client_secret" {
+    sensitive = true
+}
 variable "client_id" {}
 
 terraform {
     required_version = ">=1"
 
     cloud {
-        organization = "Your Organization"
+        organization = "add-smart"
         workspaces {
             name = "CABestPractice-terraform"
         }
